@@ -1,0 +1,1 @@
+# Swiss Knife - An informatic tool for a loot of things
