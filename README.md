@@ -1,7 +1,65 @@
-### Documentación del Programa: SwissKnife
+# SwissKnife
 
-#### Versión en Español
+SwissKnife is a multifunctional tool developed in Python that offers various utilities for tasks related to computing. Currently, it includes an image converter to WebP format and a YouTube audio/video downloader.
 
+## Installation
+
+### Dependencies
+
+To ensure SwissKnife functions correctly, you need to install the following Python libraries:
+
+- `pillow`
+- `pytube`
+- `tqdm`
+
+You can install them using `pip`. Open a terminal and run:
+
+```sh
+pip install pillow pytube tqdm
+```
+
+## Usage
+
+### Image Converter to WebP
+
+This tool allows you to convert images from any format to WebP format. You can input the path of an individual image or a folder containing multiple images.
+
+#### Usage Example
+
+1. Run the main program:
+
+   ```sh
+   python main.py
+   ```
+
+2. Select the "Image Converter to WebP" option by entering `1`.
+
+3. Enter the path of the image or image folder when prompted.
+
+4. The program will display a progress bar while converting the images and will indicate the location of the converted images.
+
+### YouTube Audio/Video Downloader
+
+This tool allows you to download audio or video from YouTube by providing the URL of the video.
+
+#### Usage Example
+
+1. Run the main program:
+
+   ```sh
+   python main.py
+   ```
+
+2. Select the "YouTube Audio/Video Downloader" option by entering `2`.
+
+3. Enter the URL of the YouTube video.
+
+4. Select the type of download:
+   - Enter `1` to download only the audio.
+   - Enter `2` to download the video.
+
+5. The program will display a progress bar while downloading the content and will indicate the location of the downloaded file.
+---
 # SwissKnife
 
 SwissKnife es una herramienta multifuncional desarrollada en Python que ofrece una variedad de utilidades para tareas relacionadas con la informática. Actualmente, incluye un convertidor de imágenes a formato WebP y un descargador de audio/video de YouTube.
@@ -66,66 +124,4 @@ Esta herramienta permite descargar audio o video de YouTube proporcionando la UR
 
 ---
 
-#### English Version
 
-# SwissKnife
-
-SwissKnife is a multifunctional tool developed in Python that offers various utilities for tasks related to computing. Currently, it includes an image converter to WebP format and a YouTube audio/video downloader.
-
-## Installation
-
-### Dependencies
-
-To ensure SwissKnife functions correctly, you need to install the following Python libraries:
-
-- `pillow`
-- `pytube`
-- `tqdm`
-
-You can install them using `pip`. Open a terminal and run:
-
-```sh
-pip install pillow pytube tqdm
-```
-
-## Usage
-
-### Image Converter to WebP
-
-This tool allows you to convert images from any format to WebP format. You can input the path of an individual image or a folder containing multiple images.
-
-#### Usage Example
-
-1. Run the main program:
-
-   ```sh
-   python main.py
-   ```
-
-2. Select the "Image Converter to WebP" option by entering `1`.
-
-3. Enter the path of the image or image folder when prompted.
-
-4. The program will display a progress bar while converting the images and will indicate the location of the converted images.
-
-### YouTube Audio/Video Downloader
-
-This tool allows you to download audio or video from YouTube by providing the URL of the video.
-
-#### Usage Example
-
-1. Run the main program:
-
-   ```sh
-   python main.py
-   ```
-
-2. Select the "YouTube Audio/Video Downloader" option by entering `2`.
-
-3. Enter the URL of the YouTube video.
-
-4. Select the type of download:
-   - Enter `1` to download only the audio.
-   - Enter `2` to download the video.
-
-5. The program will display a progress bar while downloading the content and will indicate the location of the downloaded file.
