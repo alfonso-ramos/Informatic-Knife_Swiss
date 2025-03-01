@@ -1,127 +1,167 @@
-# SwissKnife
+# Swiss Knife Project Documentation
 
-SwissKnife is a multifunctional tool developed in Python that offers various utilities for tasks related to computing. Currently, it includes an image converter to WebP format and a YouTube audio/video downloader.
+```
+ .d8888b.                d8b                        888    d8P           d8b  .d888         
+d88P  Y88b               Y8P                        888   d8P            Y8P d88P"          
+Y88b.                                               888  d8P                 888            
+ "Y888b.   888  888  888 888 .d8888b  .d8888b       888d88K     88888b.  888 888888 .d88b.  
+    "Y88b. 888  888  888 888 88K      88K           8888888b    888 "88b 888 888   d8P  Y8b 
+      "888 888  888  888 888 "Y8888b. "Y8888b.      888  Y88b   888  888 888 888   88888888 
+Y88b  d88P Y88b 888 d88P 888      X88      X88      888   Y88b  888  888 888 888   Y8b.     
+ "Y8888P"   "Y8888888P"  888  88888P'  88888P'      888    Y88b 888  888 888 888    "Y8888  
+                                                                                            
+                                                                                                                                                                                     
+```
+
+## Description
+This project includes tools for image conversion to WebP and downloading videos/audio from YouTube. It also allows managing these functions through an interactive menu.
 
 ## Installation
-
-### Dependencies
-
-To ensure SwissKnife functions correctly, you need to install the following Python libraries:
-
-- `pillow`
-- `pytube`
-- `tqdm`
-
-You can install them using `pip`. Open a terminal and run:
-
-```sh
-pip install pillow pytube tqdm
+### 1. Clone the repository
+```bash
+git clone <REPO_URL>
+cd <REPO_NAME>
 ```
+
+### 2. Create and activate a virtual environment
+#### On Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+#### On Linux/Mac
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+```bash
+pip install yt-dlp pillow
+```
+
+**Note:** `yt-dlp` requires `ffmpeg` to function properly. Install it with:
+- **Windows**: Download and install `ffmpeg` from [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html) and add it to the PATH.
+- **Linux (Debian/Ubuntu)**: `sudo apt install ffmpeg`
+- **MacOS**: `brew install ffmpeg`
 
 ## Usage
-
-### Image Converter to WebP
-
-This tool allows you to convert images from any format to WebP format. You can input the path of an individual image or a folder containing multiple images.
-
-#### Usage Example
-
-1. Run the main program:
-
-   ```sh
-   python main.py
-   ```
-
-2. Select the "Image Converter to WebP" option by entering `1`.
-
-3. Enter the path of the image or image folder when prompted.
-
-4. The program will display a progress bar while converting the images and will indicate the location of the converted images.
-
-### YouTube Audio/Video Downloader
-
-This tool allows you to download audio or video from YouTube by providing the URL of the video.
-
-#### Usage Example
-
-1. Run the main program:
-
-   ```sh
-   python main.py
-   ```
-
-2. Select the "YouTube Audio/Video Downloader" option by entering `2`.
-
-3. Enter the URL of the YouTube video.
-
-4. Select the type of download:
-   - Enter `1` to download only the audio.
-   - Enter `2` to download the video.
-
-5. The program will display a progress bar while downloading the content and will indicate the location of the downloaded file.
----
-# SwissKnife
-
-SwissKnife es una herramienta multifuncional desarrollada en Python que ofrece una variedad de utilidades para tareas relacionadas con la informática. Actualmente, incluye un convertidor de imágenes a formato WebP y un descargador de audio/video de YouTube.
-
-## Instalación
-
-### Dependencias
-
-Para que SwissKnife funcione correctamente, necesitas instalar las siguientes bibliotecas de Python:
-
-- `pillow`
-- `pytube`
-- `tqdm`
-
-Puedes instalarlas usando `pip`. Abre una terminal y ejecuta:
-
-```sh
-pip install pillow pytube tqdm
+Run the main menu with:
+```bash
+python main.py
 ```
 
-## Uso
+## Features
+### 1. Image Converter to WebP
+Converts individual images or entire folders to WebP format.
 
-### Convertidor de Imágenes a WebP
+### 2. YouTube Video and Audio Downloader
+- Downloads individual videos or playlists.
+- Supports downloading in video format or audio-only.
+- Uses `yt-dlp` instead of `pytube`.
 
-Esta herramienta permite convertir imágenes de cualquier formato al formato WebP. Puedes ingresar la ruta de una imagen individual o de una carpeta que contenga múltiples imágenes.
+## Project Structure
+```
+<project root>/
+│── converters/              # Image conversion module
+│── downloaders/             # YouTube download module
+│── downloads/               # Folder for downloaded files
+│── venv/                    # Virtual environment (not included in Git)
+│── main.py                  # Main menu
+│── .gitignore               # Files and folders ignored by Git
+│── README.md                # Project documentation
+```
 
-#### Ejemplo de Uso
+## Additional Notes
+- Updated the download system to replace `pytube`.
+- Added support for downloading entire playlists.
+- Documented virtual environment setup.
+- Simplified dependency installation into a single command.
+- Included `ffmpeg` installation as a requirement for `yt-dlp`.
 
-1. Ejecuta el programa principal:
-
-   ```sh
-   python main.py
-   ```
-
-2. Selecciona la opción "Convertidor de imágenes a WebP" ingresando `1`.
-
-3. Ingresa la ruta de la imagen o carpeta de imágenes cuando se te solicite.
-
-4. El programa mostrará una barra de progreso mientras convierte las imágenes y te indicará la ubicación de las imágenes convertidas.
-
-### Descargador de Audio/Video de YouTube
-
-Esta herramienta permite descargar audio o video de YouTube proporcionando la URL del video.
-
-#### Ejemplo de Uso
-
-1. Ejecuta el programa principal:
-
-   ```sh
-   python main.py
-   ```
-
-2. Selecciona la opción "Descargador de audio/video de YouTube" ingresando `2`.
-
-3. Ingresa la URL del video de YouTube.
-
-4. Selecciona el tipo de descarga:
-   - Ingresa `1` para descargar solo el audio.
-   - Ingresa `2` para descargar el video.
-
-5. El programa mostrará una barra de progreso mientras descarga el contenido y te indicará la ubicación del archivo descargado.
+If you find any issues or have suggestions, feel free to contribute! 😊
 
 ---
 
+# Documentación del Proyecto Swiss Knife 
 
+```
+ .d8888b.                d8b                        888    d8P           d8b  .d888         
+d88P  Y88b               Y8P                        888   d8P            Y8P d88P"          
+Y88b.                                               888  d8P                 888            
+ "Y888b.   888  888  888 888 .d8888b  .d8888b       888d88K     88888b.  888 888888 .d88b.  
+    "Y88b. 888  888  888 888 88K      88K           8888888b    888 "88b 888 888   d8P  Y8b 
+      "888 888  888  888 888 "Y8888b. "Y8888b.      888  Y88b   888  888 888 888   88888888 
+Y88b  d88P Y88b 888 d88P 888      X88      X88      888   Y88b  888  888 888 888   Y8b.     
+ "Y8888P"   "Y8888888P"  888  88888P'  88888P'      888    Y88b 888  888 888 888    "Y8888  
+                                                                                            
+  
+```
+
+## Descripción
+Este proyecto incluye herramientas para la conversión de imágenes a WebP y la descarga de videos/audio desde YouTube. Además, permite gestionar estas funciones desde un menú interactivo.
+
+## Instalación
+### 1. Clonar el repositorio
+```bash
+git clone <URL_DEL_REPOSITORIO>
+cd <NOMBRE_DEL_REPOSITORIO>
+```
+
+### 2. Crear y activar un entorno virtual
+#### En Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+#### En Linux/Mac
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### 3. Instalar dependencias
+```bash
+pip install yt-dlp pillow
+```
+
+**Nota:** Para que `yt-dlp` funcione correctamente, es necesario tener `ffmpeg` instalado. Puedes instalarlo con:
+- **Windows**: Descarga e instala `ffmpeg` desde [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html) y agrégalo al PATH.
+- **Linux (Debian/Ubuntu)**: `sudo apt install ffmpeg`
+- **MacOS**: `brew install ffmpeg`
+
+## Uso
+Ejecuta el menú principal con:
+```bash
+python main.py
+```
+
+## Funcionalidades
+### 1. Convertidor de imágenes a WebP
+Convierte imágenes individuales o en carpetas al formato WebP.
+
+### 2. Descargador de videos y audio de YouTube
+- Descarga videos individuales o listas de reproducción.
+- Soporta descarga en formato de video o solo audio.
+- Se utiliza `yt-dlp` en lugar de `pytube`.
+
+## Estructura del Proyecto
+```
+<raíz del proyecto>/
+│── converters/              # Módulo para conversión de imágenes
+│── downloaders/             # Módulo para descargas de YouTube
+│── downloads/               # Carpeta donde se almacenan los archivos descargados
+│── venv/                    # Entorno virtual (no se sube a Git)
+│── main.py                  # Menú principal
+│── .gitignore               # Archivos y carpetas a ignorar en Git
+│── README.md                # Documentación del proyecto
+```
+
+## Notas Adicionales
+- Se ha actualizado el sistema de descargas para evitar el uso de `pytube`.
+- Se agregó soporte para descargar listas de reproducción completas.
+- Se documentó la configuración del entorno virtual.
+- Ahora la instalación de dependencias se hace en un solo comando.
+- Se añadió la instalación de `ffmpeg` como requisito para el funcionamiento de `yt-dlp`.
+
+Si encuentras errores o tienes sugerencias, ¡contribuye al proyecto! 😊

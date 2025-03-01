@@ -1,0 +1,21 @@
+# Ignorar entorno virtual y archivos generados automáticamente
+venv/
+lib/
+lib64/
+include/
+bin/
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar logs y archivos temporales
+*.log
+
+# Ignorar descargas (pueden regenerarse)
+downloads/
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
