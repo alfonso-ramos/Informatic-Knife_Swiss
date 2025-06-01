@@ -37,7 +37,7 @@ source venv/bin/activate
 
 ### 3. Install dependencies
 ```bash
-pip install yt-dlp pillow
+pip install yt-dlp pillow tqdm qrcode matplotlib
 ```
 
 **Note:** `yt-dlp` requires `ffmpeg` to function properly. Install it with:
@@ -122,7 +122,7 @@ source venv/bin/activate
 
 ### 3. Instalar dependencias
 ```bash
-pip install yt-dlp pillow
+pip install yt-dlp pillow tqdm qrcode matplotlib
 ```
 
 **Nota:** Para que `yt-dlp` funcione correctamente, es necesario tener `ffmpeg` instalado. Puedes instalarlo con:
