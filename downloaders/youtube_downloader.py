@@ -12,7 +12,11 @@ def download_from_youtube(url, download_type='video', output_path='downloads'):
     """
     ydl_opts = {
         'outtmpl': os.path.join(output_path, '%(title)s.%(ext)s'),
-        'noplaylist': False if 'playlist' in url else True
+        'noplaylist': False if 'playlist' in url else True,
+        'http_headers': {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Referer': 'https://www.youtube.com/'
+        }
     }
 
     if download_type == 'audio':
