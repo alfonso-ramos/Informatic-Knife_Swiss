@@ -1,7 +1,7 @@
 import qrcode
 import matplotlib.pyplot as plt
 
-def generate_qrcode(enlace, nombre_archivo="codigo_qr.png"):
+def generate_qrcode(enlace, nombre_archivo="codigo_qr.png", mostrar_ventana=False):
     qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -14,10 +14,11 @@ def generate_qrcode(enlace, nombre_archivo="codigo_qr.png"):
     img = qr.make_image(fill="black", back_color="white")
     img.save(nombre_archivo)
 
-    # Mostrar el código QR gráficamente
-    plt.imshow(img, cmap='gray')
-    plt.axis("off")
-    plt.show()
+    # Solo mostrar ventana matplotlib si se solicita explícitamente (modo CLI)
+    if mostrar_ventana:
+        plt.imshow(img, cmap='gray')
+        plt.axis("off")
+        plt.show()
 
     print(f"Código QR generado y guardado como {nombre_archivo}")
 

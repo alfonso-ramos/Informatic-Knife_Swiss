@@ -37,7 +37,12 @@ source venv/bin/activate
 
 ### 3. Install dependencies
 ```bash
-pip install yt-dlp pillow tqdm qrcode matplotlib
+pip install -r requirements.txt
+```
+
+Or manually:
+```bash
+pip install yt-dlp pillow tqdm qrcode matplotlib customtkinter
 ```
 
 **Note:** `yt-dlp` requires `ffmpeg` to function properly. Install it with:
@@ -46,7 +51,15 @@ pip install yt-dlp pillow tqdm qrcode matplotlib
 - **MacOS**: `brew install ffmpeg`
 
 ## Usage
-Run the main menu with:
+
+### Option 1: Graphical Interface (GUI) - Recommended
+Run the modern graphical interface with:
+```bash
+python gui.py
+```
+
+### Option 2: Command Line Interface (CLI)
+Run the command-line menu with:
 ```bash
 python main.py
 ```
@@ -65,9 +78,12 @@ Converts individual images or entire folders to WebP format.
 <project root>/
 │── converters/              # Image conversion module
 │── downloaders/             # YouTube download module
+│── generators/              # Generators module (QR, etc.)
 │── downloads/               # Folder for downloaded files
 │── venv/                    # Virtual environment (not included in Git)
-│── main.py                  # Main menu
+│── main.py                  # Main menu (CLI)
+│── gui.py                   # Modern graphical interface (GUI)
+│── requirements.txt         # Project dependencies
 │── .gitignore               # Files and folders ignored by Git
 │── README.md                # Project documentation
 ```
@@ -122,7 +138,12 @@ source venv/bin/activate
 
 ### 3. Instalar dependencias
 ```bash
-pip install yt-dlp pillow tqdm qrcode matplotlib
+pip install -r requirements.txt
+```
+
+O manualmente:
+```bash
+pip install yt-dlp pillow tqdm qrcode matplotlib customtkinter
 ```
 
 **Nota:** Para que `yt-dlp` funcione correctamente, es necesario tener `ffmpeg` instalado. Puedes instalarlo con:
@@ -131,7 +152,15 @@ pip install yt-dlp pillow tqdm qrcode matplotlib
 - **MacOS**: `brew install ffmpeg`
 
 ## Uso
-Ejecuta el menú principal con:
+
+### Opción 1: Interfaz Gráfica (GUI) - Recomendado
+Ejecuta la interfaz gráfica moderna con:
+```bash
+python gui.py
+```
+
+### Opción 2: Interfaz de Línea de Comandos (CLI)
+Ejecuta el menú por consola con:
 ```bash
 python main.py
 ```
@@ -150,9 +179,12 @@ Convierte imágenes individuales o en carpetas al formato WebP.
 <raíz del proyecto>/
 │── converters/              # Módulo para conversión de imágenes
 │── downloaders/             # Módulo para descargas de YouTube
+│── generators/              # Módulo para generadores (QR, etc.)
 │── downloads/               # Carpeta donde se almacenan los archivos descargados
 │── venv/                    # Entorno virtual (no se sube a Git)
-│── main.py                  # Menú principal
+│── main.py                  # Menú principal (CLI)
+│── gui.py                   # Interfaz gráfica moderna (GUI)
+│── requirements.txt         # Dependencias del proyecto
 │── .gitignore               # Archivos y carpetas a ignorar en Git
 │── README.md                # Documentación del proyecto
 ```
@@ -163,5 +195,6 @@ Convierte imágenes individuales o en carpetas al formato WebP.
 - Se documentó la configuración del entorno virtual.
 - Ahora la instalación de dependencias se hace en un solo comando.
 - Se añadió la instalación de `ffmpeg` como requisito para el funcionamiento de `yt-dlp`.
+- **Nuevo:** Interfaz gráfica moderna con `customtkinter` para mejor experiencia de usuario.
 
 Si encuentras errores o tienes sugerencias, ¡contribuye al proyecto! 😊

@@ -1,0 +1,6 @@
+yt-dlp
+pillow
+tqdm
+qrcode
+matplotlib
+customtkinter
