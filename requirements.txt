@@ -1,4 +1,5 @@
 yt-dlp
+curl_cffi
 pillow
 tqdm
 qrcode
